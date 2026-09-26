@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: im-pact-app
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.0.0
+      - key: MONGODB_URI
+        value: mongodb+srv://mrmeetjay_db_user:wVurUVD6hNpZC6ik@cluster0.x2w2pvh.mongodb.net/im-pact?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: impact_hub_super_secret_key_2026
